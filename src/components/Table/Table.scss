@@ -1,0 +1,27 @@
+.table-container {
+  overflow: scroll;
+}
+
+.table {
+  width: 100%;
+  background-color: $secondary-black;
+  overflow: scroll;
+
+  &__header {
+    background-color: $orange;
+    padding: 12px;
+    font-size: 28px;
+
+    &.left {
+      border-top-left-radius: 30px;
+    }
+    &.right {
+      border-top-right-radius: 30px;
+    }
+  }
+
+  &__body {
+    font-size: 18px;
+    padding: 20px;
+  }
+}

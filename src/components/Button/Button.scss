@@ -1,0 +1,27 @@
+.btn {
+  display: inline-block;
+  transform: skew(-20deg);
+  transition: 0.3s;
+
+  color: $white;
+  font-size: 22px;
+  border: 1.5px solid $orange;
+  background-color: transparent;
+  padding: 10px 50px;
+
+  &:hover {
+    background-color: $orange;
+  }
+}
+
+.btn__text {
+  display: inline-block;
+  transform: skew(20deg);
+}
+
+@media (max-width: $phones) {
+  .btn {
+    font-size: 18px;
+    padding: 7px 35px;
+  }
+}
