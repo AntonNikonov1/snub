@@ -1,8 +1,8 @@
 {
-  "homepage": "https://AntonNikonov1.github.io/snub",
   "name": "snub",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://AntonNikonov1.github.io/snub",
   "dependencies": {
     "@ant-design/icons": "^4.6.2",
     "@material-ui/icons": "^4.11.2",
