@@ -1,7 +1,7 @@
 export const ROUTER_KEY = {
-  HOME: '/',
-  SPEED_BOAT: '/speed-boats',
-  BATH_SAUNA: '/bath-sauna',
-  WATERS_SLIDES: '/waterslides',
-  SLOT_MACHINES: '/slot-machines',
+  HOME: '/snub/',
+  SPEED_BOAT: '/snub/speed-boats',
+  BATH_SAUNA: '/snub/bath-sauna',
+  WATERS_SLIDES: '/snub/waterslides',
+  SLOT_MACHINES: '/snub/slot-machines',
 }
