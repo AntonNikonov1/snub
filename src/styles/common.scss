@@ -1,0 +1,135 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  color: $white;
+  font-size: 18px;
+  font-family: 'Exo 2', sans-serif;
+  background-color: $primary-black;
+}
+
+a {
+  width: auto;
+  text-decoration: none;
+  color: $white;
+}
+
+.container {
+  max-width: 1060px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  &__year {
+    content: '';
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+
+    font-size: 84px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    opacity: 0.5;
+  }
+}
+
+.numeric-item {
+  padding-left: 20px;
+  list-style-type: decimal;
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-align: left;
+}
+
+.pt100 {
+  padding-top: 100px;
+}
+
+.pb100 {
+  padding-bottom: 100px;
+}
+
+.pt80 {
+  padding-top: 80px;
+}
+
+.pb80 {
+  padding-bottom: 80px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.player {
+  margin-top: 85px;
+}
+
+@media (max-width: $phones) {
+  .container {
+    max-width: 540px;
+  }
+
+  .numeric-list {
+    padding-left: 5%;
+  }
+
+  .numeric-item {
+    margin-left: 10px;
+  }
+
+  .intro__year {
+    font-size: 58px;
+    right: 25px;
+  }
+
+  .pt-screen {
+    padding-top: 100px;
+  }
+
+  .pt100 {
+    padding-top: 40px;
+  }
+
+  .pb100 {
+    padding-bottom: 40px;
+  }
+
+  .pt80 {
+    padding-top: 30px;
+  }
+
+  .pb80 {
+    padding-bottom: 30px;
+  }
+}
+
+@media (min-width: $phones) and (max-width: $desktop) {
+  .container {
+    max-width: 720px;
+  }
+  .pt100 {
+    padding-top: 50px;
+  }
+  .pb100 {
+    padding-bottom: 50px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .container {
+    max-width: 960px;
+  }
+}

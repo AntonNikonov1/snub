@@ -1,0 +1,75 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+  background-color: $rgba-black;
+  cursor: pointer;
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 750px;
+    background-color: $primary-black;
+    border-radius: 25px;
+    cursor: default;
+
+    padding: 50px 0;
+  }
+
+  &__content {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  &__form {
+    margin-top: 40px;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    color: $white;
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__title-wrapper {
+    display: inline-block;
+    transform: skew(-20deg);
+    background: $orange;
+    padding: 15px 20px;
+  }
+
+  &__title-text {
+    display: inline-block;
+    transform: skew(20deg);
+  }
+}
+
+@media (max-width: $phones) {
+  .modal__container {
+    width: 90vw;
+    height: auto;
+    padding: 55px 0;
+  }
+
+  .modal__title-wrapper {
+    padding: 5px 10px;
+  }
+}
