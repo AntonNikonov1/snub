@@ -71,16 +71,18 @@
   }
 }
 
-@media (max-width: $phones) {
+@media (max-width: $phone) {
   .advantages-table {
     flex-direction: column;
     padding: 25px 5px;
+
     &__left-list {
       width: 100%;
     }
+
     &__right-list {
       width: 100%;
-      margin: 15px 0 0;
+      margin: 25px 0 0;
     }
 
     &__right-item {
@@ -89,7 +91,7 @@
   }
 }
 
-@media (min-width: $phones) and (max-width: $desktop) {
+@media (min-width: $phone) and (max-width: $desktop) {
   .advantages-table {
     padding: 15px;
 

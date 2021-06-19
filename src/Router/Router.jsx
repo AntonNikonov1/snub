@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { SlotMachines } from '../pages/SlotMachines'
 import { BathSauna } from '../pages/BathSauna'
 import { Home } from '../pages/Home'
+import { Error } from '../pages/Error'
 import { Waterslides } from '../pages/Waterslides'
 import { SpeedBoat } from '../pages/SpeedBoat'
 import { ROUTER_KEY } from './routerKeys'
@@ -15,6 +16,7 @@ export const Router = () => (
       <Route path={ROUTER_KEY.SPEED_BOAT} component={SpeedBoat} />
       <Route path={ROUTER_KEY.BATH_SAUNA} component={BathSauna} />
       <Route exact path={ROUTER_KEY.WATERS_SLIDES} component={Waterslides} />
+      <Route exact path="*" component={Error} />
     </Switch>
   </BrowserRouter>
 )

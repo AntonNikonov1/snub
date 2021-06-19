@@ -9,16 +9,16 @@ export const Table = ({
   return (
     <table className="table">
       <thead>
-        <tr>
-          <th className="table__header left">{leftListTitle}</th>
-          <th className="table__header right">{rightListTitle}</th>
+        <tr className="table__header-item">
+          <th className="table__header-item-content left">{leftListTitle}</th>
+          <th className="table__header-item-content right">{rightListTitle}</th>
         </tr>
       </thead>
       <tbody>
         {leftList.map((_, indx) => (
-          <tr key={indx}>
-            <th className="table__body">{leftList[indx]}</th>
-            <th className="table__body">{rightList[indx]}</th>
+          <tr key={indx} className="table__body-item">
+            <th className="table__body-item-content">{leftList[indx]}</th>
+            <th className="table__body-item-content">{rightList[indx]}</th>
           </tr>
         ))}
       </tbody>

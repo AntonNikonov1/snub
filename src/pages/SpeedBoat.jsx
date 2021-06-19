@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ReactPlayer from 'react-player'
 import { AdvantagesTable } from '../components/AdvantagesTable'
 import { GalleryCard } from '../components/GalleryCard'
@@ -6,26 +6,34 @@ import { Table } from '../components/Table'
 import { Title } from '../components/Title'
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
+import { ROUTER_KEY } from '../Router/routerKeys'
 
 export const SpeedBoat = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <section className="pt-screen">
-      <Header />
-      <div className="container">
-        <Title>скоростной катер</Title>
+      <Header activePage={ROUTER_KEY.SPEED_BOAT} />
 
-        <AdvantagesTable
-          leftTable={[
-            'На катер возможна установка максимально мощного двигателя с водометной установкой OPTIMAX.',
-            'Форма днища спроектирована таким образом, что даже пересекая волны перпендикулярно он не подпрыгивает создавая неудобств вам и вашим пассажирам.',
-            'На ходу катер почти не соприкасается своим днищем с поверхностью воды, зона соприкосновения с водой всего чуть более метра, при этом он отлично держится за воду.',
-          ]}
-          rightTable={[
-            'В производстве катера применяются материалы финской фирмы Ашланд.',
-            'Возможно изготовление катера под подвесной или стационарный двигатель.',
-            'С двигателем 90 сил катер практически моментально выходит на глиссирование и совсем не чувствителен к нагрузке.',
-          ]}
-        />
+      <div className="container">
+        <section>
+          <Title>скоростной катер</Title>
+
+          <AdvantagesTable
+            leftTable={[
+              'На катер возможна установка максимально мощного двигателя с водометной установкой OPTIMAX.',
+              'Форма днища спроектирована таким образом, что даже пересекая волны перпендикулярно он не подпрыгивает создавая неудобств вам и вашим пассажирам.',
+              'На ходу катер почти не соприкасается своим днищем с поверхностью воды, зона соприкосновения с водой всего чуть более метра, при этом он отлично держится за воду.',
+            ]}
+            rightTable={[
+              'В производстве катера применяются материалы финской фирмы Ашланд.',
+              'Возможно изготовление катера под подвесной или стационарный двигатель.',
+              'С двигателем 90 сил катер практически моментально выходит на глиссирование и совсем не чувствителен к нагрузке.',
+            ]}
+          />
+        </section>
 
         {/* <ReactPlayer
           url="https://www.youtube.com/watch?v=34Na4j8AVgA"

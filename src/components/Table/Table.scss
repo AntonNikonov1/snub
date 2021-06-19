@@ -1,13 +1,9 @@
-.table-container {
-  overflow: scroll;
-}
-
 .table {
   width: 100%;
   background-color: $secondary-black;
-  overflow: scroll;
+  border-radius: 30px;
 
-  &__header {
+  &__header-item-content {
     background-color: $orange;
     padding: 12px;
     font-size: 28px;
@@ -20,8 +16,14 @@
     }
   }
 
-  &__body {
+  &__body-item-content {
     font-size: 18px;
     padding: 20px;
+  }
+}
+
+@media (max-width: $phone) {
+  .table-container {
+    overflow: scroll;
   }
 }

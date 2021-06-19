@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { BrowserRouter as Router, Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
 import { AdvantagesTable } from '../components/AdvantagesTable'
 import { Button } from '../components/Button'
 import { GalleryCard } from '../components/GalleryCard'
@@ -12,9 +12,14 @@ import { ROUTER_KEY } from '../Router/routerKeys'
 
 export const Home = () => {
   const [isModalOpen, seIsModalOpen] = useState(false)
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <section>
-      <Header />
+      <Header activePage={ROUTER_KEY.HOME} />
 
       <div className="container">
         <main className="intro">

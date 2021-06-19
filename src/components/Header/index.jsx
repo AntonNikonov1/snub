@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { ROUTER_KEY } from '../../Router/routerKeys'
 import { bodyScroll } from '../../utils/bodyScroll'
 
-export const Header = () => {
+export const Header = ({ activePage }) => {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false)
 
   useEffect(() => {
@@ -14,35 +14,24 @@ export const Header = () => {
     <header className="header">
       <nav className="nav">
         <Link to={ROUTER_KEY.HOME} className="nav__logo">
-          Фоп Меляницккий
+          ФОП Меляницкий
         </Link>
 
         <ul className={isHamburgerOpen ? 'nav__list open' : 'nav__list'}>
-          <li className="nav__item">
-            <Link to={ROUTER_KEY.HOME} className="nav__link">
-              Главная
-            </Link>
-          </li>
-          <li className="nav__item">
-            <Link to={ROUTER_KEY.WATERS_SLIDES} className="nav__link">
-              Водные горки
-            </Link>
-          </li>
-          <li className="nav__item">
-            <Link to={ROUTER_KEY.BATH_SAUNA} className="nav__link">
-              Туркцкая баня
-            </Link>
-          </li>
-          <li className="nav__item">
-            <Link to={ROUTER_KEY.SLOT_MACHINES} className="nav__link">
-              Игровые автоматы
-            </Link>
-          </li>
-          <li className="nav__item">
-            <Link to={ROUTER_KEY.SPEED_BOAT} className="nav__link">
-              Cкоростной катер
-            </Link>
-          </li>
+          {navigationList.map((item, indx) => (
+            <li className="nav__item" key={indx}>
+              <Link
+                to={item?.navigation}
+                className={
+                  activePage === item.navigation
+                    ? 'nav__link active'
+                    : 'nav__link'
+                }
+              >
+                {item?.name}
+              </Link>
+            </li>
+          ))}
         </ul>
 
         <button
@@ -55,3 +44,11 @@ export const Header = () => {
     </header>
   )
 }
+
+const navigationList = [
+  { name: 'Главная', navigation: ROUTER_KEY.HOME },
+  { name: 'Водные горки', navigation: ROUTER_KEY.WATERS_SLIDES },
+  { name: 'Турекцкая баня', navigation: ROUTER_KEY.BATH_SAUNA },
+  { name: 'Игровые автоматы', navigation: ROUTER_KEY.SLOT_MACHINES },
+  { name: 'Cкоростной катер', navigation: ROUTER_KEY.SPEED_BOAT },
+]

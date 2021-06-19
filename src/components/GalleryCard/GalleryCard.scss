@@ -15,7 +15,7 @@
   }
 }
 
-@media (max-width: $phones) {
+@media (max-width: $phone) {
   .gallery-card {
     width: 90%;
     height: 260px;
@@ -28,7 +28,7 @@
   }
 }
 
-@media (min-width: $phones) and (max-width: $desktop) {
+@media (min-width: $phone) and (max-width: $desktop) {
   .gallery-card__wrapper {
     grid-template-columns: repeat(2, 1fr);
   }

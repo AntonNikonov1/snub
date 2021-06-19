@@ -1,27 +1,35 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { AdvantagesTable } from '../components/AdvantagesTable'
 import { GalleryCard } from '../components/GalleryCard'
 import { Title } from '../components/Title'
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
+import { ROUTER_KEY } from '../Router/routerKeys'
 
 export const SlotMachines = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <section className="pt-screen">
-      <Header />
-      <div className="container">
-        <Title>корпуса игровых автоматов</Title>
+      <Header activePage={ROUTER_KEY.SLOT_MACHINES} />
 
-        <AdvantagesTable
-          leftTable={[
-            'Можно сделать плавные закругленные края, чего не возможно достичь изделиям из металла.',
-            'Корпуса игровых автоматов имеют легкий вес.',
-          ]}
-          rightTable={[
-            'В производстве катера применяются материалы финской фирмы Ашланд.',
-            'Имеем возможность разработать и изготовить корпуса игровых автоматов или отдельные детали под заказ по вашим требованиям и в соотвецтви с вашими пожеланиями по вашим чертежам.',
-          ]}
-        />
+      <div className="container">
+        <section>
+          <Title>корпуса игровых автоматов</Title>
+
+          <AdvantagesTable
+            leftTable={[
+              'Можно сделать плавные закругленные края, чего не возможно достичь изделиям из металла.',
+              'Корпуса игровых автоматов имеют легкий вес.',
+            ]}
+            rightTable={[
+              'В производстве катера применяются материалы финской фирмы Ашланд.',
+              'Имеем возможность разработать и изготовить корпуса игровых автоматов или отдельные детали под заказ по вашим требованиям и в соотвецтви с вашими пожеланиями по вашим чертежам.',
+            ]}
+          />
+        </section>
 
         <section className="pt80 pb80">
           <Title>Галерея работ</Title>

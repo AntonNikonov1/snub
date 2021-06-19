@@ -19,7 +19,7 @@
   transform: skew(20deg);
 }
 
-@media (max-width: $phones) {
+@media (max-width: $phone) {
   .btn {
     font-size: 18px;
     padding: 7px 35px;

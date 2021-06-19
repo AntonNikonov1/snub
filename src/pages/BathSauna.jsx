@@ -1,13 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { AdvantagesTable } from '../components/AdvantagesTable'
 import { Title } from '../components/Title'
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
+import { ROUTER_KEY } from '../Router/routerKeys'
 
 export const BathSauna = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <section className="pt-screen">
-      <Header />
+      <Header activePage={ROUTER_KEY.BATH_SAUNA} />
+
       <div className="container">
         <section>
           <Title>Турецкая баня ХАМАМ</Title>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { AdvantagesTable } from '../components/AdvantagesTable'
 import { Button } from '../components/Button'
 import { ExampleWork } from '../components/ExampleWork'
@@ -6,11 +6,17 @@ import { GalleryCard } from '../components/GalleryCard'
 import { Title } from '../components/Title'
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
+import { ROUTER_KEY } from '../Router/routerKeys'
 
 export const Waterslides = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <section className="pt-screen">
-      <Header />
+      <Header activePage={ROUTER_KEY.WATERS_SLIDES} />
+
       <div className="container">
         <section>
           <Title>водные горки</Title>
